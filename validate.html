@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+		function validate()
+  		{
+    		var option = document.forms.r1;
+    		for(var i = 0;i<option.length;i++)
+    		{
+      			if(option[i].checked==true)
+        		return true;
+    		}
+    		document.getElementById("msg").innerHTML="*This field is mandatory";
+    		return false;
+    	}
+</script>
+</head>
+<body>
+ <center><h1>Welcome to Youtube Channel</h1></center>
+ <form name="forms" onsubmit="return validate()">
+ <input type="radio" name="r1" value="opt">Like
+ <input type="radio" name="r1" value="opt1">Share
+ <input type="radio" name="r1" value="opt2">Subscribe
+ <div><p id="msg"></p></div>
+ <input type="submit" name="s1" value="submit">
+</body>
+</html>
